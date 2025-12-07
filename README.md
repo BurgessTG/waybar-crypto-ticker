@@ -14,6 +14,36 @@ A sleek, scrolling cryptocurrency ticker overlay for Waybar on Hyprland/Wayland.
 - **Multi-monitor aware** — only shows on your configured display
 - **Fully configurable** — position, colors, fonts, coins, and more
 
+## Included Cryptocurrencies
+
+Icons included out of the box:
+
+| Coin | Symbol | Kraken Pair |
+|------|--------|-------------|
+| Bitcoin | BTC | `BTC/USD` |
+| Ethereum | ETH | `ETH/USD` |
+| Solana | SOL | `SOL/USD` |
+| Cardano | ADA | `ADA/USD` |
+| XRP | XRP | `XRP/USD` |
+| Avalanche | AVAX | `AVAX/USD` |
+
+### Adding More Coins
+
+Any cryptocurrency available on [Kraken](https://www.kraken.com/) can be added. Simply:
+
+1. Find the trading pair on Kraken (e.g., `DOGE/USD`, `MATIC/USD`, `LINK/USD`)
+2. Download an icon (SVG or PNG) to `~/.local/share/waybar-crypto-ticker/icons/`
+3. Add to your config:
+
+```toml
+[[coins]]
+symbol = "DOGE/USD"
+name = "Dogecoin"
+icon = "doge.svg"
+```
+
+Popular pairs available: `DOT/USD`, `ATOM/USD`, `LINK/USD`, `MATIC/USD`, `UNI/USD`, `LTC/USD`, `SHIB/USD`, and [many more](https://api.kraken.com/0/public/AssetPairs).
+
 ## Requirements
 
 - Hyprland (Wayland compositor)
