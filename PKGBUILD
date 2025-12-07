@@ -9,7 +9,7 @@ license=('MIT')
 depends=('gtk4' 'gtk4-layer-shell')
 makedepends=('rust' 'cargo' 'git')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/BurgessTG/waybar-crypto-ticker/archive/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('d48d56e7cffc085b919cf38691bbf894f9c708f8526c89bd89f6a7bc246a2bc9')
 
 build() {
     cd "$pkgname-$pkgver"
