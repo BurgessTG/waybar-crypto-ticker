@@ -1,0 +1,81 @@
+# waybar-crypto-ticker configuration
+# Copy to ~/.config/waybar-crypto-ticker/config.toml
+
+# Monitor to display on (run `hyprctl monitors` to find name)
+# Omit to show on default/primary monitor
+monitor = "DP-3"
+
+[position]
+# Where to anchor the ticker: top-left, top-right, bottom-left, bottom-right
+anchor = "top-right"
+
+# Margins from screen edges (pixels)
+margin_top = 0
+margin_right = 200
+margin_bottom = 0
+margin_left = 0
+
+# Ticker window size
+width = 320
+height = 26
+
+[appearance]
+# Font family (must be installed on system)
+font_family = "monospace"
+font_size = 11.0
+
+# Colors in hex format
+color_up = "#4ec970"      # Price going up
+color_down = "#e05555"    # Price going down
+color_neutral = "#888888" # No significant change
+
+# Icon size in pixels
+icon_size = 16
+
+[animation]
+# Scroll speed in pixels per second
+scroll_speed = 30.0
+
+# Frames per second (1-120)
+fps = 60
+
+# Coins to display
+# symbol: Kraken trading pair (see https://api.kraken.com/0/public/AssetPairs)
+# name: Display name (unused, for your reference)
+# icon: Filename in ~/.local/share/waybar-crypto-ticker/icons/
+
+[[coins]]
+symbol = "BTC/USD"
+name = "Bitcoin"
+icon = "btc.svg"
+
+[[coins]]
+symbol = "ETH/USD"
+name = "Ethereum"
+icon = "eth.svg"
+
+[[coins]]
+symbol = "SOL/USD"
+name = "Solana"
+icon = "sol.svg"
+
+[[coins]]
+symbol = "ADA/USD"
+name = "Cardano"
+icon = "ada.svg"
+
+[[coins]]
+symbol = "XRP/USD"
+name = "XRP"
+icon = "xrp.svg"
+
+[[coins]]
+symbol = "AVAX/USD"
+name = "Avalanche"
+icon = "avax.svg"
+
+# Add more coins as needed:
+# [[coins]]
+# symbol = "DOGE/USD"
+# name = "Dogecoin"
+# icon = "doge.svg"

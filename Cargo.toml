@@ -1,0 +1,30 @@
+[package]
+name = "waybar-crypto-ticker"
+version = "1.0.0"
+edition = "2021"
+authors = ["BurgessTG"]
+description = "A sleek, scrolling cryptocurrency ticker overlay for Waybar on Hyprland"
+license = "MIT"
+repository = "https://github.com/BurgessTG/waybar-crypto-ticker"
+keywords = ["waybar", "crypto", "ticker", "hyprland", "wayland"]
+categories = ["command-line-utilities"]
+readme = "README.md"
+
+[dependencies]
+gtk4 = "0.9"
+gtk4-layer-shell = "0.4"
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = { version = "0.24", features = ["native-tls"] }
+futures-util = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+resvg = "0.44"
+dirs = "5"
+libc = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
